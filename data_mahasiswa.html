@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Mengatur tampilan dasar halaman */
+        body { font-family: Arial; background: #f4f8ff; margin: 0; padding: 20px; }
+        /* Mengatur judul halaman */
+        h1 { color: #1a56b0; text-align: center; font-size: 24px; }
+        /* Merapikan tabel */
+        table { border-collapse: collapse; width: 100%; }
+        /* Memberi warna pada judul kolom */
+        th { background: #1a56b0; color: white; padding: 6px; }
+        /* Mengatur garis dan jarak sel tabel */
+        td { border: 1px solid #ccd; padding: 6px; }
+        /* Memberi warna pada baris aktif */
+        .aktif { background: #e6eefb; }
+        /* Mengatur ukuran judul tertentu */
+        #judul { font-size: 24px; }
+        /* Memberi warna pada baris NIM genap */
+        .genap { background: #d6e7ff; }
+        /* Mengatur jarak elemen input */
+        input, select, textarea { margin: 5px; }
+        /* Mengatur tampilan dan jarak form */
+        form { background: white; padding: 20px; margin-bottom: 20px; border: 1px solid #ccd; }
+        /* Memberi warna pada tombol */
+        button { background: #1a56b0; color: white; }
+        /* Mengubah warna tombol saat disorot */
+        button:hover { background: #123d80; }
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+</head>
+<body>
+    <!---
+    nim : 252520099
+    nama lengkap : Retno Palupi
+    Kelas : A
+    -->
+
+    <form action="proses.php" method="post">
+        <h1>Data Mahasiswa</h1>
+        Nama: <input type="text" name="nama"><br>
+        Email: <input type="email" name="email"><br>
+        Jenis Kelamin:
+        <input type="radio" name="jk" value="L"> Laki-laki
+        <input type="radio" name="jk" value="P"> Perempuan<br>
+        Hobi:
+        <input type="checkbox" name="hobi" value="baca"> Membaca
+        <input type="checkbox" name="hobi" value="olahraga"> Olahraga
+        <input type="checkbox" name="hobi" value="travel"> Traveling
+        <input type="checkbox" name="hobi" value="musik"> Musik<br>
+        Jurusan:
+        <select name="jurusan">
+            <option>Informatika</option>
+            <option>Sistem Informasi</option>
+        </select><br>
+        Alamat: <br>
+        <textarea name="alamat" rows="3"></textarea><br>
+        <button type="submit">Kirim</button>
+    </form>
+<!-- br digunakan untuk membuat jeda baris (line break) -->
+<br>
+
+    <table border="1">
+    <caption>Daftar Nilai</caption>
+    <tr>
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>Prodi</th>
+        <th colspan="4">IPK</th>
+    </tr>
+    <tr>
+        <td>252520099</td>
+        <td>Retno Palupi</td>
+        <td>Informatika</td>
+        <td>4.00</td>
+    </tr>
+    <tr class="genap">
+        <td>252520023</td>
+        <td>Arini Tri Melani</td>
+        <td>Pendidikan Ekonomi</td>
+        <td>3.81</td>
+    </tr>
+    <tr>    
+        <td>252520060</td>
+        <td>Malika Alya Dafista</td>
+        <td>Sastra Thailand</td>
+        <td>3.93</td>
+    </tr>  
+    <tr class="genap">    
+        <td>252520074</td>
+        <td>Devi Wiko Astriana</td>
+        <td>Sastra Inggris</td>
+        <td>3.90</td>
+    </tr>
+    <tr>    
+        <td>252520102</td>
+        <td>Meila Bunga Hendrawan</td>
+        <td>Seni</td>
+        <td>3.82</td>
+    </tr>
+</body>
+</html>
